@@ -142,7 +142,7 @@ def lineSweep_algo():
                 os.makedirs(path)
 
             # s1 = "LineSweep_Result_" + filename
-            s1 = "021001_003" + filename[-4:]
+            s1 = filename  # use original filename so SVM can read user ID correctly
             print(s1)
             cv2.imwrite(os.path.join(path, s1), temp_np)
 
@@ -151,4 +151,3 @@ def lineSweep_algo():
     # print("You may check the Result folder in the same directory to see the cropped Project_Images.")
 
     return "Line Sweep Algorithm Successfully completed."
-
