@@ -42,7 +42,7 @@ def lineSweep_algo():
             flagx = 0
             indexStartX = 0
             indexEndX = 0
-
+            # sweep top to bottom
             for i in range(rows):
                 line = thresh[i, :]
 
@@ -72,7 +72,7 @@ def lineSweep_algo():
             flagy = 0
             indexStartY = 0
             indexEndY = 0
-
+            # sweep left to right
             for j in range(cols):
                 line = thresh[indexStartX:indexEndX, j : j + 20]
 
@@ -151,3 +151,12 @@ def lineSweep_algo():
     # print("You may check the Result folder in the same directory to see the cropped Project_Images.")
 
     return "Line Sweep Algorithm Successfully completed."
+
+
+
+# Row 0: 0   0   0   0   0
+# Row 1: 0   0   0   0   0
+# Row 2: 0 255 255 255   0
+# Row 3: 0 255 255 255   0
+# Row 4: 0   0   0   0   0
+
